@@ -7,30 +7,16 @@
     android:background="@android:color/background_dark">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="413dp"
-        android:layout_marginEnd="166dp"
-        android:layout_marginBottom="270dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="449dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="350dp"
-        android:layout_height="309dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="356dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

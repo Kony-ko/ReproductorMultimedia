@@ -1,4 +1,4 @@
-package com.example.reproductormultimedia.ui.video;
+package com.example.reproductormultimedia.ui.playlist;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,15 +11,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.reproductormultimedia.R;
 
-public class VideoFragment extends Fragment {
+public class PlaylistFragment extends Fragment {
 
-    private VideoViewModel videoViewModel;
+    private PlaylistViewModel playlistViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        videoViewModel =
-                ViewModelProviders.of(this).get(VideoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_video, container, false);
+        playlistViewModel =
+                ViewModelProviders.of(this).get(PlaylistViewModel.class);
+        View root = inflater.inflate(R.layout.playlist_fragment, container, false);
 
         return root;
     }

@@ -1,8 +1,6 @@
 package com.example.reproductormultimedia;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_music, R.id.navigation_video, R.id.navigation_photo)
+               R.id.navigation_playlist ,R.id.navigation_music, R.id.navigation_video, R.id.navigation_photo)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

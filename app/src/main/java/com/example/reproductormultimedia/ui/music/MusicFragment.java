@@ -11,14 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.reproductormultimedia.R;
-
-import java.io.IOException;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -29,7 +25,7 @@ public class MusicFragment extends Fragment {
 
     MediaPlayer player;
     Context context;
-
+    private TextView tituloCancion;
     private Button btnPlay;
     private Button btnPause;
     private Button btnStop;
@@ -42,13 +38,7 @@ public class MusicFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_music, container, false);
 
 
-        final TextView textView = root.findViewById(R.id.text_music);
-        musicViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
 
         player = MediaPlayer.create(getContext(), R.raw.backinblack);
 
