@@ -61,7 +61,7 @@ public class MusicFragment extends Fragment {
             }
         });
 
-        btnPause = root.findViewById(R.id.buttonPlay);
+        btnPause = root.findViewById(R.id.buttonPause);
         btnPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +70,7 @@ public class MusicFragment extends Fragment {
             }
         });
 
-        btnStop = root.findViewById(R.id.buttonPlay);
+        btnStop = root.findViewById(R.id.buttonStop);
         btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
