@@ -19,8 +19,8 @@ public class PhotoFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         photoViewModel =
                 ViewModelProviders.of(this).get(PhotoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_photo, container, false);
+        View view = inflater.inflate(R.layout.fragment_photo, container, false);
 
-        return root;
+        return view;
     }
 }

@@ -5,14 +5,14 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_dark"
+    android:background="@drawable/gradient_background_love"
     android:paddingTop="?attr/actionBarSize">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:background="@android:color/background_dark"
+        android:layout_height="70dp"
+        android:background="@android:color/holo_red_dark"
         app:itemIconTint="@android:color/background_light"
         app:itemTextColor="@android:color/background_light"
         app:labelVisibilityMode="auto"

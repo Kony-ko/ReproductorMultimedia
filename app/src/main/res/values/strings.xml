@@ -3,5 +3,7 @@
     <string name="title_music">Music</string>
     <string name="title_video">Video</string>
     <string name="title_photo">Photo</string>
-    <string name="title_playlist">Playlist</string>
+    <string name="data_song">Back in Black
+    AC/DC</string>
+
 </resources>

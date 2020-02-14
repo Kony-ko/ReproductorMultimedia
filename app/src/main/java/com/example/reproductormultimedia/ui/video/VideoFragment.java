@@ -19,8 +19,8 @@ public class VideoFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         videoViewModel =
                 ViewModelProviders.of(this).get(VideoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_video, container, false);
+        View view = inflater.inflate(R.layout.fragment_video, container, false);
 
-        return root;
+        return view;
     }
 }

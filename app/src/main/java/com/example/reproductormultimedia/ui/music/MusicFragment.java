@@ -1,82 +1,59 @@
 package com.example.reproductormultimedia.ui.music;
 
-import android.content.Context;
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.reproductormultimedia.MusicActivity;
 import com.example.reproductormultimedia.R;
-
-import static android.widget.Toast.LENGTH_SHORT;
 
 public class MusicFragment extends Fragment {
 
     private MusicViewModel musicViewModel;
-    View root;
+    View view;
 
-    MediaPlayer player;
-    Context context;
-    private TextView tituloCancion;
-    private Button btnPlay;
-    private Button btnPause;
-    private Button btnStop;
-
+    private CardView song1;
+    private CardView song2;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         musicViewModel =
                 ViewModelProviders.of(this).get(MusicViewModel.class);
-        root = inflater.inflate(R.layout.fragment_music, container, false);
 
+        //EN EL METODO ONCREATEVIEW SE DEVUELVE UNA VISTA....
+        view = inflater.inflate(R.layout.fragment_music, container, false);
 
+        //CODIGO DE LAS CARDVIEW QUE AL PULSARLAS LLAMAN A LA MUSIC ACTIVITY CON INTENT, PASANDO UN STRING CON EL NOMBRE DE LA CANCION (PARA EL SWITCH)
 
-
-        player = MediaPlayer.create(getContext(), R.raw.backinblack);
-
-        btnPlay = root.findViewById(R.id.buttonPlay);
-        btnPlay.setOnClickListener(new View.OnClickListener() {
+        song1 = view.findViewById(R.id.cardviewSong1);
+        song1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.start();
-                Toast.makeText(getContext(),"Playing", LENGTH_SHORT).show();
+                String songName = "Back in Black";
+                Intent intent = new Intent(getActivity().getApplication(), MusicActivity.class);
+                intent.putExtra("name",songName.toString());
+                startActivity(intent);
             }
         });
 
-        btnPause = root.findViewById(R.id.buttonPause);
-        btnPause.setOnClickListener(new View.OnClickListener() {
+        song2 = view.findViewById(R.id.cardviewSong2);
+        song2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.pause();
-                Toast.makeText(getContext(),"Pause", LENGTH_SHORT).show();
+                String songName = "Hells Bells";
+                Intent intent = new Intent(getActivity().getApplication(), MusicActivity.class);
+                intent.putExtra("name",songName.toString());
+                startActivity(intent);
             }
         });
 
-        btnStop = root.findViewById(R.id.buttonStop);
-        btnStop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player.stop();
-                Toast.makeText(getContext(),"Stopped", LENGTH_SHORT).show();
-            }
-        });
-
-
-
-
-
-
-
-
-
-        return root;
+        return view;
     }
 }

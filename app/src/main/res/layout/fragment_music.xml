@@ -4,82 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_dark">
+    android:background="@drawable/gradient_background_love">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="316dp"
-        android:layout_height="317dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="372dp"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="638dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vinilo" />
+        app:tabIndicatorColor="#FFEB3B"
+        app:tabTextColor="#FFEB3B">
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="398dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginBottom="283dp"
-        android:background="@android:drawable/ic_media_play"
-        android:backgroundTint="@android:color/white"
-        android:textColor="#FF5722"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Songs" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/albums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="albums" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/artists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="artists" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewSong1"
+        android:layout_width="332dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="505dp"
+        app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/buttonPause"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="398dp"
-        android:layout_marginEnd="269dp"
-        android:layout_marginBottom="283dp"
-        android:background="@android:drawable/ic_media_pause"
-        android:backgroundTint="@android:color/white"
-        android:textColor="#FF5722"
+        <TextView
+            android:id="@+id/textViewTittleSong1"
+            android:layout_width="224dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|top"
+            android:drawableStart="@drawable/baseline_music_note_white_18dp"
+            android:text="Back in Black"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/imageViewSong1"
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/backinblack" />
+
+        <TextView
+            android:id="@+id/textViewArtistsSong1"
+            android:layout_width="224dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:drawableStart="@drawable/baseline_group_white_18dp"
+            android:text="AC/DC"
+            android:textColor="@android:color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewSong2"
+        android:layout_width="332dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="405dp"
+        app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/buttonStop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="398dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="283dp"
-        android:background="@drawable/baseline_stop_black_18dp"
-        android:backgroundTint="@android:color/white"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageViewSong2"
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/hellsbells"
+            tools:srcCompat="@drawable/hellsbells" />
 
-    <TextView
-        android:id="@+id/textViewTituloCancion"
-        android:layout_width="409dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="478dp"
-        android:layout_marginBottom="216dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textViewTittleSong2"
+            android:layout_width="224dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|top"
+            android:drawableStart="@drawable/baseline_music_note_white_18dp"
+            android:text="Hells Bells"
+            android:textColor="@android:color/white"
+            tools:text="Hells Bells" />
+
+        <TextView
+            android:id="@+id/textViewArtistsSong2"
+            android:layout_width="224dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:drawableStart="@drawable/baseline_group_white_18dp"
+            android:text="AC/DC"
+            android:textColor="@android:color/white" />
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

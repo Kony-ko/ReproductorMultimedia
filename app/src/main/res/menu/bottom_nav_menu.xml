@@ -2,10 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_playlist"
-        android:icon="@android:drawable/ic_menu_sort_by_size"
-        android:title="@string/title_playlist" />
-    <item
         android:id="@+id/navigation_music"
         android:icon="@drawable/baseline_music_note_white_18dp"
         android:title="@string/title_music" />
