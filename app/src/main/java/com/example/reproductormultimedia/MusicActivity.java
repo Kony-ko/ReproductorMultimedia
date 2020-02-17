@@ -30,19 +30,17 @@ public class MusicActivity extends AppCompatActivity {
 
         //CON ESTE INTENT OBTENGO EL NOMBRE DE LA CANCION SELECCIONADA PROVENIENTE DEL FRAGMENT MUSICA Y LO PASO POR EL SWITCH PARA REPRODUCIR EL ARCHIVO ESPECIFICO.
         // TAMBIEN LO ENVIO AL TEXTVIEW PARA QUE APAREZCA EL TITULO DE LA CANCION
-        String song = getIntent().getExtras().getString("name");
+        final String song = getIntent().getExtras().getString("name");
         Toast.makeText(MusicActivity.this,song, LENGTH_SHORT).show();
         songTittle = findViewById(R.id.textViewSongTittle);
 
         switch (song){
             case "Back in Black":
                 player = MediaPlayer.create(this, R.raw.backinblack);
-                songTittle.setText("Playing now..." + song);
                 break;
 
             case "Hells Bells":
                 player = MediaPlayer.create(this, R.raw.hellsbells);
-                songTittle.setText("Playing now..." + song);
                 break;
         }
 
@@ -56,7 +54,8 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 player.start();
-                Toast.makeText(MusicActivity.this,"Playing", LENGTH_SHORT).show();
+                songTittle.setText("Playing now..." + song);
+                Toast.makeText(MusicActivity.this,"Play", LENGTH_SHORT).show();
             }
         });
 
@@ -74,7 +73,8 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 player.stop();
-                Toast.makeText(MusicActivity.this,"Stopped", LENGTH_SHORT).show();
+                songTittle.setText("");
+                Toast.makeText(MusicActivity.this,"Stop", LENGTH_SHORT).show();
             }
         });
 
